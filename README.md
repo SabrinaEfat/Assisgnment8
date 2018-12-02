@@ -30,7 +30,7 @@ Vulnerability #2: Username Enumeration:By loggin using a wrong username, the ale
 
 ## Red
 
-Vulnerability #1: Insecure Direct Object Reference (IDOR): In the Find a Salesperson section https://35.188.56.136/red/public/salesperson.php?id=some number, by setting the number to be 10 or 11 will give two people that can't be found in Find a Salesperson section. But in blue or green site, when you enter id=10 or id=11, then it will go back to Find a Salesperson page.
+Vulnerability #1: Insecure Direct Object Reference (IDOR): By setting the number to be 10 or 11 will give two people that can't be found in Find a Salesperson section. But in blue or green site, when you enter id=10 or id=11, then it will go back to Find a Salesperson page.
 Vulnerability #2:Cross-Site Request Forgery (CSRF)=> By trying to edit the information after changing the value of csrdf_token, red section is still able to make a change, while the other two sections show "Error: invalid request" after I changed its csrf_token.
 
 
