@@ -35,7 +35,7 @@ Vulnerability #1: Insecure Direct Object Reference (IDOR): By setting the number
 ![Insecure object](https://github.com/SabrinaEfat/Assisgnment8/blob/master/Insecure%20direct%20object.gif)
 
 Vulnerability #2:Cross-Site Request Forgery (CSRF)=> By trying to edit the information after changing the value of csrdf_token, red section is still able to make a change, while the other two sections show "Error: invalid request" after I changed its csrf_token.
-
+![cross-site](https://github.com/SabrinaEfat/Assisgnment8/blob/master/Cross%20Site%20Request%20Forgery%20RED%3CCSRF%3E.gif)
 
 
 
