@@ -17,8 +17,8 @@ Vulnerability #1:Session Hijacking/Fixation:
 I can bypass the login by using another browser session ID, which can lead to steal users information.
 ![blue](https://user-images.githubusercontent.com/42579932/48589990-e58dfd00-e90b-11e8-8273-c5fbf733a6b8.gif)
 
-Vulnerability #2: SQL Injection(SQLi)=> The blue color site has one place where the input is not being sanitized before used in an SQL query.
-![sql injection sqli](https://user-images.githubusercontent.com/42579932/48591739-348b6080-e913-11e8-8166-846c2a2ed8df.gif)
+Vulnerability #2: SQL Injection(SQLi)=> First Select the Salesperson section, there is "?id=some number" at the end of the url, by entering a ' after some number (number can be from 1 to 9), the blue section will show "Database query failed" while the green and red sections just redirect resulting the blue section has SQLI vulnerability. I used ?id=' OR 1=1'-- etc to testify it.
+
 
 ## Green
 
@@ -26,17 +26,14 @@ Vulnerability #1:Cross-Site Scripting(XSS).
 ![cross-site scripting](https://user-images.githubusercontent.com/42579932/48592108-dc555e00-e914-11e8-9db4-d03b3b5d57f0.gif)
 
 
-Vulnerability #2: Username Enumeration: It can perform if web application gives hints whether user exists or not.
-![username enumeration](https://user-images.githubusercontent.com/42579932/48592182-35bd8d00-e915-11e8-90f7-fa55fb5526b8.gif)
-
+Vulnerability #2: Username Enumeration:By loggin using a wrong username, the alert message is in plain text. But loggin using a correct username, the alert message appeared is bold. By inspecting the page, we could found that class is "failure" for correct username. The other class is "failed" for uncorrect username.
 
 ## Red
 
-Vulnerability #1: Insecure Direct Object Reference (IDOR): The red color site is missing code which would prevent some sensitive information from being made public.
-![vulnerability 1 insecure direct object reference](https://user-images.githubusercontent.com/42579932/48590376-41a55100-e90d-11e8-8400-d5cc7c3dd108.gif)
+Vulnerability #1: Insecure Direct Object Reference (IDOR): In the Find a Salesperson section https://35.188.56.136/red/public/salesperson.php?id=some number, by setting the number to be 10 or 11 will give two people that can't be found in Find a Salesperson section. But in blue or green site, when you enter id=10 or id=11, then it will go back to Find a Salesperson page.
+Vulnerability #2:Cross-Site Request Forgery (CSRF)=> By trying to edit the information after changing the value of csrdf_token, red section is still able to make a change, while the other two sections show "Error: invalid request" after I changed its csrf_token.
 
-Vulnerability #2:Cross-Site Request Forgery (CSRF)=> The red color site does not have CSRF protections on the admin area. A smart hacker could design a form which would automatically submit from data to the staff area and take advantage of a logged in user's acccess permissions.
-![vulnerability 2 cross-site request](https://user-images.githubusercontent.com/42579932/48590435-6ef1ff00-e90d-11e8-9d6c-26f98969b2fb.gif)
+
 
 
 
