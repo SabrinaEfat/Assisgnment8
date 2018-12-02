@@ -18,7 +18,7 @@ I can bypass the login by using another browser session ID, which can lead to st
 ![blue](https://user-images.githubusercontent.com/42579932/48589990-e58dfd00-e90b-11e8-8273-c5fbf733a6b8.gif)
 
 Vulnerability #2: SQL Injection(SQLi)=> First Select the Salesperson section, there is "?id=some number" at the end of the url, by entering a ' after some number (number can be from 1 to 9), the blue section will show "Database query failed" while the green and red sections just redirect resulting the blue section has SQLI vulnerability. I used ?id=' OR 1=1'-- etc to testify it.
-https://github.com/SabrinaEfat/Assisgnment8/blob/master/sql.gif
+![blue](https://github.com/SabrinaEfat/Assisgnment8/blob/master/sql.gif)
 
 ## Green
 
