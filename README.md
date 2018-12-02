@@ -27,7 +27,8 @@ Vulnerability #1:Cross-Site Scripting(XSS).
 
 
 Vulnerability #2: Username Enumeration:By loggin using a wrong username, the alert message is in plain text. But loggin using a correct username, the alert message appeared is bold. By inspecting the page, we could found that class is "failure" for correct username. The other class is "failed" for uncorrect username.
-![User Enumeration] (https://github.com/SabrinaEfat/Assisgnment8/blob/master/Green%20Vulnerability%231%20username%20enumeration.gif)
+![User Enumeration](https://github.com/SabrinaEfat/Assisgnment8/blob/master/Green%20Vulnerability%231%20username%20enumeration.gif)
+
 ## Red
 
 Vulnerability #1: Insecure Direct Object Reference (IDOR): By setting the number to be 10 or 11 will give two people that can't be found in Find a Salesperson section. But in blue or green site, when you enter id=10 or id=11, then it will go back to Find a Salesperson page.
